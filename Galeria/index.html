@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Aqui escolhemos o titulo de nossa página -->
+		<title>Fotos de Gatinhos</title>
+	</head>
+	<body>
+    <!-- Primeiro usamos a tag h1 para o titulo de nossa página, como forma de boas praticas usamos apenas uma tag h1 por página. -->
+		<h1>Fotos de Gatos</h1>
+		
+		<!-- A foto do gato sendo inserida usando uma tag img que recebe o src como o link da imagem e o alt com a descrição da 
+			imagem para leitores de tela ou se a imagem não carregar -->
+		<img
+			src="https://midias.correiobraziliense.com.br/_midias/jpg/2022/04/27/675x450/1_photo5136881156778732101-7854129.jpg"
+			alt="dois gatos, um branco e um preto, o branco esta deitado e o preto esta sentado"
+		/>
+
+		<!-- 		Um texto seguido de um link de te redireciona para a página sobre gatos, esse atributo target faz com que ao clicar no link 
+		sejamos mandados para uma nova guia e não sairmos da que estamos. -->
+
+		<p>Veja mais sobre gatos</p>
+		<a href="https://pt.wikipedia.org/wiki/Gato" target="_blank">Clique aqui</a>
+
+		<!-- Titulo para as listas do que gatos gostam e não gostam -->
+    <h2>Coisas que gatos gostam</h2>
+
+		<!-- listas desordenada e ordenada  -->
+		<ul>
+			<li>Carinhos</li>
+			<li>Peixes</li>
+		</ul>
+    <h2>Coisas que gatos não gostam</h2>
+    <ol>
+			<li>Outros gatos</li>
+			<li>Banhos</li>
+		</ol>
+
+
+		<h2>Form sobre seu gato</h2>
+		<!-- Usando a tag form para enviar informações para um "servidor", o form recebe o argumento action pois ele enviaria essas informações para um servidor-->
+				<form action="https://servidorfalso/submit-cat-photo"></form>
+	
+				<!-- a tag fieldset é usada para organizar os inputs, que nesse caso são botões selecionaveis, por isso o type deles é radio -->
+				<fieldset>
+					<!-- a tag legend vai funcionar como uma tag label -->
+					<legend>Seu gato tem acesso a rua?</legend>
+					<input name="indoor-outdoor" id="indoor" value="indoor" type="radio"> <label for="sim" checked> Sim</label>
+					<input name="indoor-outdoor" id="outdoor" value="outdoor" type="radio"> <label for="nao"> Não</label>
+				</fieldset>
+
+				<!-- o fieldset é usado para o mesmo motivo do outro uso -->
+				<fieldset>
+
+					<legend>Qual a personalidade de seu gato?</legend>
+					<!-- o type="checkbox" que faz nosso input tomar outa forma -->
+					<input type="checkbox" name="personality" id="loving" value="loving"> <label for="amoroso" checked>Amoroso</label>
+					<input type="checkbox" name="personality" id="lazy" value="lazy"> <label for="preguicoso">Preguiçoso</label>
+					<input type="checkbox" name="personality" id="energetic" value="energetic"> <label for="energetico">Energetico</label>
+				</fieldset>
+				
+				<!-- Nesse caso o atibruto placeholder funciona para manter um texto no seu input de texto, para o que o seu usuario tenha uma dica de como o preencher -->
+				
+				<input type="text" name="catpourl" placeholder="URL da foto do seu gato" required>
+				
+				<!-- essa tag é um botão que fica no final do nosso form, e serve para enviar o form pro servidor -->
+				<button type="submit">Enviar</button>
+		</form>
+	</body>
+</html>
