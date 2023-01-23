@@ -1,9 +1,11 @@
 body{
   background-color: cadetblue;
   color: cornsilk;
+  /* Escolhemos aqui a fonte que sera usada em todos elementos da página, pois todos os elementos são "filhos" da tag body */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* aqui usamos dois seletores com o mesmo código */
 h1, p{
   text-align: center;
 }
@@ -12,7 +14,9 @@ form{
   margin: 0 auto;
   width: 400px;
   height: 350px;
-  background-color: rgba(69, 111, 112, 0.5);
+  /* aqui mostramos que também podemos passar o código da cor em hexadecimal */
+  background-color: #456f7080;
+  /* o "border-radius" serve pra arrendondarmos os cantos do nosso elemento, recebe valores da mesma forma */
   border-radius: 5px;
   padding: 20px;
   padding-right: 0;
@@ -30,6 +34,7 @@ input{
 }
 
 input, label{
+  /* aqui temos o uso da propriedade display para mudarmos como o elemento se comporta */
   display: block;
 }
 
@@ -48,7 +53,9 @@ button{
   height: 25px;
 }
 
+/* Aqui usamos um seletor especial, que aplica o estilo apenas em elementos de um tipo com um certo atributo, nesse caso foi um input */
 input[type="radio"]{  
+  /* o valor unset restaura o padrão original do elemento */
   width: unset;
   height: unset;
   display: inline;
