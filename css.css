@@ -1,0 +1,8 @@
+p{
+  color: red;
+  width: 500px;
+}
+
+p, h1, li{
+  font-family: 'Courier New', Courier, monospace;
+}
