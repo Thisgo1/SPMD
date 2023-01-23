@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importante, esse é o tipo de tag que usamos para aplicarmos o css que está em outro arquivo -->
+  <link rel="stylesheet" href="style.css">
+  <title>Formulário</title>
+</head>
+<body>
+  <!-- começando a pagina com o Titulo principal -->
+  <h1>Formulário de inscrição</h1>
+
+  <!-- Aqui temos um form que envia dados para o servidor(que não foi configurado, então num vai pra lugar algum) usando o atributo action post -->
+  <form action="post">
+    <!-- Aqui temos os exemplo de uso de label e de inputs com diferente de tipos, que irão enviar diferentes tipos de dados -->
+    <label>Nome completo:<input type="text"placeholder="Nome completo"></label>
+    <label>Email:<input type="email" placeholder="exemplo@email.com"></label>
+    <label>Data de nascimento<input type="date"></label>
+    
+    <!-- Aqui o uso de field set para efeitos de organização e estetica -->
+    <fieldset>
+      <!-- A tag legend serve para que o nome do nosso fieldset apareça para o usuario -->
+      <legend>Se identifica em qual gênero?</legend>
+
+      <!-- Repare que nesse caso os inputs tem um "name" definido, isso serve para que o usario possa marcar apenas uma das opções fornecidas -->
+      <label><input type="radio" name="gender" value="gender">Masculino</label>
+      <label><input type="radio" name="gender" value="gender">Feminino</label>
+      <label><input type="radio" name="gender" value="gender">Não-binário</label>
+    </fieldset>
+    <!-- Por fim um botão que tem a função de enviar os dados recolhidos pelo form para o servidor -->
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
